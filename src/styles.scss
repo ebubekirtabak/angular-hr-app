@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+$listProperty: margin padding;
+
+@each $prop in $listProperty {
+  @for $i from -100 through 100 {
+    .#{$prop} {
+      &-#{$i} {
+        #{$prop}: #{$i+"px"};
+      }
+
+      &-top-#{$i} {
+        #{$prop}-top: #{$i+"px"};
+      }
+
+      &-right-#{$i} {
+        #{$prop}-right: #{$i+"px"};
+      }
+
+      &-bottom-#{$i} {
+        #{$prop}-bottom: #{$i+"px"};
+      }
+
+      &-left-#{$i} {
+        #{$prop}-left: #{$i+"px"};
+      }
+
+      &-tb-#{$i} {
+        #{$prop}-top: #{$i+"px"};
+        #{$prop}-bottom: #{$i+"px"};
+      }
+
+      &-lr-#{$i} {
+        #{$prop}-left: #{$i+"px"};
+        #{$prop}-right: #{$i+"px"};
+      }
+    }
+  }
+}
