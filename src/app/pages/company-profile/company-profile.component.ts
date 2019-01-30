@@ -11,7 +11,7 @@ import { Company } from '@models/company.model';
 export class CompanyProfileComponent implements OnInit {
 
 
-  companys: Company[];
+  company: Company[];
   constructor (
     private apiService: ApiService
   ) {
@@ -21,8 +21,7 @@ export class CompanyProfileComponent implements OnInit {
   ngOnInit() {
     this.apiService.getCompanyProfile(12).subscribe(res => {
       if (res) {
-        debugger
-        this.companys = res.data;
+        this.company = res[0];
       }
     });
   }

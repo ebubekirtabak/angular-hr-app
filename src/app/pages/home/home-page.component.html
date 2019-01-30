@@ -1,6 +1,6 @@
 <div class="pure-g">
   <div class="pure-u-1-4" *ngFor="let company of companys;">
-    <a [routerLink]="['company-profile', company.Id]">
+    <a [routerLink]="['/company-profile', company.Id]">
       <div class="card-view">
         <img class="pure-img" [src]="company.logo" />
         <p> {{ company.name }} </p>

@@ -1,0 +1,14 @@
+.company-content {
+  padding: 1.4em .8em;
+  &__logo {
+    height: 125px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__img {
+      max-height: 125px;
+      width: auto;;
+    }
+  }
+}

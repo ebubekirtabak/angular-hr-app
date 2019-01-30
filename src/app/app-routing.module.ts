@@ -6,7 +6,7 @@ import { CompanyProfileComponent } from '@pages/company-profile/company-profile.
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomePageComponent,
     pathMatch: 'full',
     data: {
@@ -23,7 +23,11 @@ const routes: Routes = [
       breadcrumb_level: 0,
       breadcrumb_type: 'main',
     },
-
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 

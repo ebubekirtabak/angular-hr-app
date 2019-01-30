@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HomePageComponent } from '@pages/home/home-page.component';
 import { CompanyProfileComponent } from '@pages/company-profile/company-profile.component';
 import { RouterModule } from '@angular/router';
+import { ComponentModule } from '@components/component.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule,
+    ComponentModule
   ],
   exports: [
     HomePageComponent,
