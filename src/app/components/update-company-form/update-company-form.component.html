@@ -1,0 +1,19 @@
+<form #companyForm="ngForm" (ngSubmit)="onSubmit(companyForm)" class="pure-form pure-form-stacked padding-top-40">
+  <fieldset>
+    <legend>Update Company</legend>
+    <div class="margin-top-10">
+      <label for="name">Company Name</label>
+      <input id="name" type="text" placeholder="Company Name" [value]="company?.name" required>
+    </div>
+    <div class="margin-top-10">
+      <label for="tel">Tel</label>
+      <input id="tel" type="text" placeholder="Tel" [value]="company?.phone" required>
+    </div>
+    <div class="margin-top-10">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Email" [value]="company?.email" required>
+    </div>
+    <div class="margin-top-10"></div>
+    <button type="submit" class="pure-button pure-button-primary">Update Company</button>
+  </fieldset>
+</form>
