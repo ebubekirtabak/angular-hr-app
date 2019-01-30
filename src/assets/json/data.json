@@ -5,28 +5,32 @@
       "name": "Walmart",
       "logo": "https://image.flaticon.com/icons/svg/825/825537.svg",
       "email": "info@walmart.com",
-      "phone": "+4432 324 34 23"
+      "phone": "+4432 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 13,
       "name": "Apple",
       "logo": "https://image.flaticon.com/icons/svg/152/152752.svg",
       "email": "info@apple.com",
-      "phone": "+4232 324 34 23"
+      "phone": "+4232 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 14,
       "name": "Microsoft",
       "logo": "https://image.flaticon.com/icons/svg/732/732221.svg",
       "email": "info@microsoft.com",
-      "phone": "+1122 324 34 23"
+      "phone": "+1122 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 15,
       "name": "Google",
       "logo": "https://image.flaticon.com/icons/svg/281/281764.svg",
       "email": "info@google.com",
-      "phone": "+4432 324 33 22"
+      "phone": "+4432 324 33 22",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 16,
@@ -40,35 +44,40 @@
       "name": "IBM",
       "logo": "https://image.flaticon.com/icons/svg/882/882727.svg",
       "email": "info@walmart.com",
-      "phone": "+4432 324 34 23"
+      "phone": "+4432 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 18,
       "name": "MCDonald's",
       "logo": "https://image.flaticon.com/icons/svg/732/732217.svg",
       "email": "info@mcdonalds.com",
-      "phone": "+4432 324 34 23"
+      "phone": "+4432 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 19,
       "name": "Samsung",
       "logo": "https://image.flaticon.com/icons/svg/882/882747.svg",
       "email": "info@walmart.com",
-      "phone": "+4432 324 34 23"
+      "phone": "+4432 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 20,
       "name": "Huawei",
       "logo": "https://image.flaticon.com/icons/svg/882/882738.svg",
       "email": "info@huawei.com",
-      "phone": "+4432 324 34 23"
+      "phone": "+4432 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     },
     {
       "Id": 21,
       "name": "Dell",
       "logo": "https://image.flaticon.com/icons/svg/882/882726.svg",
       "email": "info@dell.com",
-      "phone": "+4432 324 34 23"
+      "phone": "+4432 324 34 23",
+      "address": "Lorem Ipsum Sit Amet"
     }
   ]
 }
