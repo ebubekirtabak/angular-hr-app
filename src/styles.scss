@@ -1,3 +1,6 @@
+@import 'assets/scss/main.scss';
+
+
 $listProperty: margin padding;
 
 @each $prop in $listProperty {
