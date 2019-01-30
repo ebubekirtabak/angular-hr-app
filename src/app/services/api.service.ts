@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Company } from '@models/company.model';
+import { BaseResponse } from '@models/base-response.model';
 
 
 const ENDPOINTS = {
@@ -22,12 +23,26 @@ export class ApiService {
     };
   }
 
-  getCompanys(): Observable<Company[]> {
+  getCompanys(): Observable<BaseResponse<Company[]>> {
     return this.http.get(ENDPOINTS.GET_COMPANYS)
       .pipe(
-        map((resp) => {
+        map((resp: BaseResponse<Company[]>) => {
           if (resp) {
             return resp;
+          }
+
+          return null;
+        }),
+        catchError(this.handleError<any>('vehicleDetail'))
+      );
+  }
+
+  getCompanyProfile(Id: number): Observable<BaseResponse<Company[]>> {
+    return this.http.get(ENDPOINTS.GET_COMPANYS)
+      .pipe(
+        map((resp: BaseResponse<Company[]>) => {
+          if (resp) {
+            return resp.data.filter(item => item.Id === Id);
           }
 
           return null;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '@services/api.service';
 import { Company } from '@models/company.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,8 @@ export class HomePageComponent implements OnInit {
 
   companys: Company[];
   constructor (
-    private apiService: ApiService
+    private apiService: ApiService,
+    private router: Router
   ) {
 
   }
@@ -21,7 +23,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.apiService.getCompanys().subscribe(res => {
       if (res) {
-        this.companys = res.companys;
+        this.companys = res.data;
       }
     });
   }

@@ -1,8 +1,10 @@
 <div class="pure-g">
   <div class="pure-u-1-4" *ngFor="let company of companys;">
-    <div class="card-view">
-      <img class="pure-img" [src]="company.logo" />
-      <p> {{ company.name }} </p>
-    </div>
+    <a [routerLink]="['company-profile', company.Id]">
+      <div class="card-view">
+        <img class="pure-img" [src]="company.logo" />
+        <p> {{ company.name }} </p>
+      </div>
+    </a>
   </div>
 </div>
