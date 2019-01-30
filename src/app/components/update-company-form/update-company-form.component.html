@@ -3,15 +3,15 @@
     <legend>Update Company</legend>
     <div class="margin-top-10">
       <label for="name">Company Name</label>
-      <input id="name" type="text" placeholder="Company Name" [value]="company?.name" required>
+      <input id="name" name="name" ngModel #name="ngModel" type="text" placeholder="Company Name" [ngModel]="company?.name" required>
     </div>
     <div class="margin-top-10">
-      <label for="tel">Tel</label>
-      <input id="tel" type="text" placeholder="Tel" [value]="company?.phone" required>
+      <label for="phone">Tel</label>
+      <input name="phone" ngModel #tel="ngModel"  type="text" placeholder="Tel" [ngModel]="company?.phone" required>
     </div>
     <div class="margin-top-10">
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Email" [value]="company?.email" required>
+      <input name="email" ngModel #email="ngModel" type="email" placeholder="Email" [ngModel]="company?.email" required>
     </div>
     <div class="margin-top-10"></div>
     <button type="submit" class="pure-button pure-button-primary">Update Company</button>

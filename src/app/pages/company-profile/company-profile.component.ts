@@ -11,7 +11,7 @@ import { Company } from '@models/company.model';
 export class CompanyProfileComponent implements OnInit {
 
 
-  company: Company[];
+  company: Company;
   constructor (
     private apiService: ApiService
   ) {
@@ -26,4 +26,9 @@ export class CompanyProfileComponent implements OnInit {
     });
   }
 
+  onFormSubmit(event: any) {
+    if (event.isValid) {
+      this.company = event.formElements;
+    }
+  }
 }
