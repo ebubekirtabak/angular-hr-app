@@ -3,11 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Company } from '@models/company.model';
+import { User } from '@models/user.model';
 import { BaseResponse } from '@models/base-response.model';
 
 
 const ENDPOINTS = {
   GET_COMPANYS: '../assets/json/data.json',
+  GET_CANDIDATES: 'https://randomuser.me/api?results=10',
 };
 @Injectable()
 export class ApiService {
@@ -33,7 +35,7 @@ export class ApiService {
 
           return null;
         }),
-        catchError(this.handleError<any>('vehicleDetail'))
+        catchError(this.handleError<any>('getCompanys'))
       );
   }
 
@@ -47,7 +49,21 @@ export class ApiService {
 
           return null;
         }),
-        catchError(this.handleError<any>('vehicleDetail'))
+        catchError(this.handleError<any>('getCompanyProfile'))
+      );
+  }
+
+  getCandidates(): Observable<BaseResponse<User[]>> {
+    return this.http.get(ENDPOINTS.GET_CANDIDATES)
+      .pipe(
+        map((resp: BaseResponse<User[]>) => {
+          if (resp) {
+            return resp;
+          }
+
+          return null;
+        }),
+        catchError(this.handleError<any>('getCandidates'))
       );
   }
 }
