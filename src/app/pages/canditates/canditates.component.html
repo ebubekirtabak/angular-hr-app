@@ -1,0 +1,32 @@
+<div class="content">
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Telefon</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList;let i = index;">
+        <td>
+          {{ (i + 1) }}
+        </td>
+        <td>
+          {{ user?.name.first }}
+        </td>
+        <td>
+          {{ user?.name.last }}
+        </td>
+        <td>
+          {{ user?.phone }}
+        </td>
+        <td>
+          <a class="pure-button pure-button-primary" *ngIf="user?.id?.value" [routerLink]="['/canditates-profile/' + user?.id?.value]">Detaylar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

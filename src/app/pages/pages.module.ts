@@ -5,13 +5,14 @@ import { CompanyProfileComponent } from '@pages/company-profile/company-profile.
 import { CanditatesComponent } from '@pages/canditates/canditates.component';
 import { RouterModule } from '@angular/router';
 import { ComponentModule } from '@components/component.module';
-
+import { CanditatesProfileComponent } from '@pages/canditates-profile/canditates-profile.component';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     CompanyProfileComponent,
-    CanditatesComponent
+    CanditatesComponent,
+    CanditatesProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +22,8 @@ import { ComponentModule } from '@components/component.module';
   exports: [
     HomePageComponent,
     CompanyProfileComponent,
-    CanditatesComponent
+    CanditatesComponent,
+    CanditatesProfileComponent
   ],
   providers: [],
   bootstrap: []

@@ -26,7 +26,12 @@ export class CanditatesComponent implements OnInit {
 
   getCandidates() {
     this.apiService.getCandidates().subscribe((response) => {
-      debugger;
+      console.log(response);
+      if (response.info) {
+        this.userList = response.results;
+        localStorage.setItem('userList', JSON.stringify(this.userList));
+      }
+
     });
   }
 }

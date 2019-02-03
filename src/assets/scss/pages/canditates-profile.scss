@@ -1,0 +1,14 @@
+.canditates {
+  max-width: 1280px;
+  @include display-flex;
+  @include align-items(center);
+  @include flex-flow(column);
+
+  &__content {
+    max-width: 720px;
+    &__img {
+      max-width: 100px;
+      height: auto;;
+    }
+  }
+}

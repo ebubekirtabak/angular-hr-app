@@ -1,4 +1,5 @@
 export interface BaseResponse<T> {
   data: T;
-  result: T;
+  results: T;
+  info: T;
 }

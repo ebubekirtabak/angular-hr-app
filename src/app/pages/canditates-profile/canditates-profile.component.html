@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="canditates">
+    <div class="canditates__content margin-top-60">
+      <img class="pure-img canditates__content__img" [src]="userModel?.picture?.large" />
+      <h2>
+        {{ userModel?.name?.first }} {{ userModel?.name?.last }}
+      </h2>
+      <p class="margin-top-10">
+        <b>
+          Email:
+        </b>
+        {{ userModel?.email }}
+      </p>
+      <p class="margin-top-10">
+        <b>
+          Phone:
+        </b>
+        {{ userModel?.phone }}
+      </p>
+      <p class="margin-top-10">
+        <b>
+          Gender:
+        </b>
+        {{ userModel?.gender }}
+      </p>
+    </div>
+  </div>
+</div>

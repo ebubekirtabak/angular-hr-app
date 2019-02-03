@@ -4,4 +4,5 @@ export interface Company {
   logo: string;
   email: string;
   phone: string;
+  address: string;
 }

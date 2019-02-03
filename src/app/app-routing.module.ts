@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from '@pages/home/home-page.component';
 import { CompanyProfileComponent } from '@pages/company-profile/company-profile.component';
 import { CanditatesComponent } from '@pages/canditates/canditates.component';
+import { CanditatesProfileComponent } from '@pages/canditates-profile/canditates-profile.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,16 @@ const routes: Routes = [
     path: 'candidates',
     component: CanditatesComponent,
     data: {
-      breadcrumb: 'Kullanıcı lİSTESİ',
+      breadcrumb: 'Kullanıcı Listesi',
+      breadcrumb_level: 1,
+      breadcrumb_type: 'main',
+    },
+  },
+  {
+    path: 'canditates-profile/:uid',
+    component: CanditatesProfileComponent,
+    data: {
+      breadcrumb: 'Kullanıcı Profili',
       breadcrumb_level: 1,
       breadcrumb_type: 'main',
     },

@@ -39,7 +39,7 @@ export class CompanyProfileComponent implements OnInit {
 
   onFormSubmit(event: any) {
     if (event.isValid) {
-      this.company = event.formElements;
+      this.company = Object.assign(this.company, event.formElements);
     }
   }
 }
